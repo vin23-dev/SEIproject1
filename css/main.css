@@ -1,0 +1,155 @@
+html{
+    background-image: url();
+}
+h1{
+    
+}
+#wheel{
+    width: 300px;
+    height: 300px;
+    border: 2px solid black;
+    margin: auto;
+    border-radius: 50%;
+    
+}
+#spinwheel{
+    display: flex;
+    margin: auto;
+    width: 150px;
+    justify-content: center;
+    padding: 15px;
+    margin-top: 20px;
+}
+#resetwheel{
+    display: flex;
+    margin: 5px auto;
+}
+.gameboard{
+    margin: 5px auto;
+    border: 3px solid black;
+    width: 60vw;
+    height: 20vh;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    display: grid;
+    border-radius: 2%;
+}
+#boardtitle{
+    text-align: center;
+    margin-top: 50px;
+    font-family: monospace;
+    color: gold;
+}
+.number{
+    color: whitesmoke;
+    font-size: large;
+    text-align: center;
+}
+.number1{
+    background-color: red;
+}
+.number13{
+    background-color: black;
+}
+.number25{
+    background-color: red;
+}
+.number2{
+    background-color: black;
+}
+.number14{
+    background-color: red;
+}
+.number26{
+    background-color: black;
+}
+.number3{
+    background-color: red;
+}
+.number15{
+    background-color: black;
+}
+.number27{
+    background-color: red;
+}
+.number4{
+    background-color: red;
+}
+.number16{
+    background-color: black;
+}
+.number28{
+    background-color: black;
+}
+.number5{
+    background-color: black;
+}
+.number17{
+    background-color: red;
+}
+.number29{
+    background-color: black;
+}
+.number6{
+    background-color: red;
+}
+.number18{
+    background-color: black;
+}
+.number30{
+    background-color: red;
+}
+.number7{
+    background-color: red;
+}
+.number19{
+    background-color: black;
+}
+.number31{
+    background-color: red;
+}
+.number8{
+    background-color: black;
+}
+.number20{
+    background-color: red;
+}
+.number32{
+    background-color: black;
+}
+.number9{
+    background-color: red;
+}
+.number21{
+    background-color: black;
+}
+.number33{
+    background-color: red;
+}
+.number10{
+    background-color: red;
+}
+.number22{
+    background-color: black;
+}
+.number34{
+    background-color: black;
+}
+.number11{
+    background-color: black;
+}
+.number23{
+    background-color: red;
+}
+.number35{
+    background-color: black;
+}
+.number12{
+    background-color: red;
+}
+.number24{
+    background-color: black;
+}
+.number36{
+    background-color: red;
+}
