@@ -1,8 +1,27 @@
 html{
-    background-image: url();
+    background-color: black;
 }
-h1{
+.section1{
+    display: inline-block;
+}
+#currentbet{
+    margin-left: 50px;
+    width: 150px;
+    height: 100px;
+    font-family: 'Dancing Script', cursive;
+    font-size: xx-large;
+    color: gold;
     
+}
+#header{
+    background-color: black;
+    font-family: 'Dancing Script', cursive;
+    color: gold;
+}
+#subsection1{
+    display: inline-flex;
+    align-items: center;
+    margin-left: 375px;
 }
 #wheel{
     width: 300px;
@@ -33,12 +52,14 @@ h1{
     grid-template-rows: 1fr 1fr 1fr;
     display: grid;
     border-radius: 2%;
+    margin-bottom: 10px;
 }
 #boardtitle{
     text-align: center;
     margin-top: 50px;
-    font-family: monospace;
     color: gold;
+    font-family: 'Dancing Script', cursive;
+    font-size: xx-large;
 }
 .number{
     color: whitesmoke;
