@@ -23,7 +23,7 @@ function init(){
     statusmessage.style.backgroundColor = 'black';
     enterbet.value = '';
     wheelResult.innerHTML = '';
-    
+
     render();
 }
 
@@ -51,13 +51,17 @@ function render(){
 }
 function reset(){
     init();
+    if (currentSelection){
+        currentSelection.style.border = 'none';
+        currentSelection = undefined;
+    }
 }
 function boardSelection(number){
     if (parseInt(currentBalance.value) <= 0) return;
     if (parseInt(currentBet.value) > parseInt(currentBalance.value)) return;
     if (currentSelection) return;
     currentSelection = number.target;
-    number.target.style.backgroundColor = 'gold';
+    number.target.style.border = '5px solid gold';
     statusmessage.style.color = 'gold';
     statusmessage.style.backgroundColor = 'black'
     statusmessage.innerHTML = `Spin the wheel!`;
