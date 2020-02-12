@@ -8,11 +8,12 @@ let currentSelection;
 let resetGame = document.getElementById('resetwheel');
 let spinWheel = document.getElementById('spinwheel');
 let wheelResult = document.getElementById('wheel');
+
 /*----- event listeners -----*/
 document.getElementById('placebet').addEventListener('click', adjustBalance);
 document.querySelector('.gameboard').addEventListener('click', boardSelection);
-resetGame.addEventListener('click', reset)
-spinWheel.addEventListener('click', getNumber)
+resetGame.addEventListener('click', reset);
+spinWheel.addEventListener('click', getNumber);
 /*----- functions -----*/
 init();
 
@@ -25,7 +26,7 @@ function init(){
     enterbet.value = '';
     wheelResult.innerHTML = '';
     render();
-}
+};
 
 function adjustBalance(){
     currentBalance -= parseInt(enterbet.value);
@@ -47,8 +48,6 @@ function adjustBalance(){
 
 function render(){
     balancemessage.textContent = currentBalance;
-    
-    
 };
 
 function reset(){
@@ -73,7 +72,7 @@ function boardSelection(number){
 function getNumber(){
     if (parseInt(currentBalance.value) <= 0) return;
     if (parseInt(enterbet.value) > parseInt(currentBalance.value)) return;
-    let wheelValue = (Math.floor(Math.random() * 36 +1));
+    let wheelValue = (Math.floor(Math.random() * 36 + 1));
     wheelResult.innerHTML = wheelValue;
     checkForWin(currentSelection, wheelValue);
 };
@@ -88,4 +87,5 @@ function checkForWin(pickedNumber, winner){
         statusmessage.style.color = 'red'
         statusmessage.style.backgroundColor = 'black'
     }
-}
+};
+
