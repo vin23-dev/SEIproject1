@@ -9,6 +9,7 @@ body{
 }
 #balance{
    margin-right: 100px;
+   padding-right: 30px;
    font-family: 'Dancing Script', cursive;
    color: black;
    font-size: xx-large;
@@ -17,6 +18,7 @@ body{
 #enterbet{
     background-color: rgba(0, 0, 0, 0.5);
     font-family: 'Times New Roman', Times, serif;
+    width: 150px;
 }
 #currentbet{
     margin-left: 50px;
@@ -196,6 +198,6 @@ body{
 .number36{
     background-color: red;
 }
-.number:active{
+.number:hover{
     background-color: gold;
 }
