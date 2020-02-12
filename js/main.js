@@ -21,9 +21,9 @@ function init(){
     currentBet = enterbet.value;
     statusmessage.innerHTML = `Place your bets!!!`;
     statusmessage.style.backgroundColor = 'black';
+    statusmessage.style.color = 'gold';
     enterbet.value = '';
     wheelResult.innerHTML = '';
-
     render();
 }
 
@@ -44,18 +44,21 @@ function adjustBalance(){
     }
     render();
 };
+
 function render(){
     balancemessage.textContent = currentBalance;
     
     
-}
+};
+
 function reset(){
     init();
     if (currentSelection){
         currentSelection.style.border = 'none';
         currentSelection = undefined;
     }
-}
+};
+
 function boardSelection(number){
     if (parseInt(currentBalance.value) <= 0) return;
     if (parseInt(currentBet.value) > parseInt(currentBalance.value)) return;
@@ -64,12 +67,25 @@ function boardSelection(number){
     number.target.style.border = '5px solid gold';
     statusmessage.style.color = 'gold';
     statusmessage.style.backgroundColor = 'black'
-    statusmessage.innerHTML = `Spin the wheel!`;
-    
+    statusmessage.innerHTML = `Spin the wheel!`;   
 };
+
 function getNumber(){
     if (parseInt(currentBalance.value) <= 0) return;
     if (parseInt(enterbet.value) > parseInt(currentBalance.value)) return;
     let wheelValue = (Math.floor(Math.random() * 36 +1));
     wheelResult.innerHTML = wheelValue;
+    checkForWin(currentSelection, wheelValue);
 };
+
+function checkForWin(pickedNumber, winner){
+    if (pickedNumber === winner){
+        statusmessage.innerHTML = 'WINNER!!!!!'
+        statusmessage.style.color = 'green'
+        statusmessage.style.backgroundColor = 'black'
+    }else{
+        statusmessage.innerHTML = 'You lose. :('
+        statusmessage.style.color = 'red'
+        statusmessage.style.backgroundColor = 'black'
+    }
+}
