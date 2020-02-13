@@ -1,14 +1,17 @@
 /*----- constants -----*/
-
+const redArr = [1, 3, 5, 7, 9, 12, 14, 16,
+    18, 19, 21, 23, 25, 27, 30, 32, 34, 36];
+const blackArr = [2, 4, 6, 8, 10, 11, 13, 15,
+     17, 20, 22, 24, 26, 28, 29, 31, 33, 35];
 /*----- app's state (variables) -----*/
 let currentBalance;
 let currentBet;
 let currentSelection;
+let currentWinner;
 /*----- cached element references -----*/
 let resetGame = document.getElementById('resetwheel');
 let spinWheel = document.getElementById('spinwheel');
 let wheelResult = document.getElementById('wheel');
-
 /*----- event listeners -----*/
 document.getElementById('placebet').addEventListener('click', adjustBalance);
 document.querySelector('.gameboard').addEventListener('click', boardSelection);
@@ -29,22 +32,24 @@ function init(){
 };
 
 function adjustBalance(){
-    currentBalance -= parseInt(enterbet.value);
-    if (currentBalance === 0){
-        statusmessage.style.color = 'gold';
-        statusmessage.style.backgroundColor = 'black'
-        statusmessage.innerHTML = `You're out of money!`;
-    }else if (parseInt(enterbet.value) > parseInt(currentBalance)){
-        statusmessage.style.color = 'gold';
-        statusmessage.style.backgroundColor = 'black'
-        statusmessage.innerHTML = `You don't have enough money to make that wager!`
-    }else{
-        statusmessage.style.color = 'gold';
-        statusmessage.style.backgroundColor = 'black'
-        statusmessage.innerHTML = `You have bet $${enterbet.value}! Choose a number!`
+    if (currentBalance > 0 && currentBalance >= parseInt(enterbet.value)) {
+        currentBalance -= parseInt(enterbet.value);
+        if (currentBalance === 0){
+            statusmessage.style.color = 'gold';
+            statusmessage.style.backgroundColor = 'black'
+            statusmessage.innerHTML = `You're out of money!`;
+        }else if (parseInt(enterbet.value) > parseInt(currentBalance)){
+            statusmessage.style.color = 'gold';
+            statusmessage.style.backgroundColor = 'black'
+            statusmessage.innerHTML = `You don't have enough money to make that wager!`
+        }else{
+            statusmessage.style.color = 'gold';
+            statusmessage.style.backgroundColor = 'black'
+            statusmessage.innerHTML = `You have bet $${enterbet.value}! Choose a number!`
+        }
+        render();
     }
-    render();
-};
+}
 
 function render(){
     balancemessage.textContent = currentBalance;
@@ -62,7 +67,8 @@ function boardSelection(number){
     if (parseInt(currentBalance.value) <= 0) return;
     if (parseInt(currentBet.value) > parseInt(currentBalance.value)) return;
     if (currentSelection) return;
-    currentSelection = parseInt(number.target);
+    currentWinner = parseInt(number.target.id);
+    currentSelection = number.target;
     number.target.style.border = '5px solid gold';
     statusmessage.style.color = 'gold';
     statusmessage.style.backgroundColor = 'black'
@@ -74,23 +80,18 @@ function getNumber(){
     if (parseInt(enterbet.value) > parseInt(currentBalance.value)) return;
     let wheelValue = (Math.floor(Math.random() * 36 + 1));
     wheelResult.innerHTML = wheelValue;
-    checkForWin(currentSelection, wheelValue);
+    checkForWin(currentWinner, wheelValue);
 };
 
 function checkForWin(pickedNumber, winner){
     if (pickedNumber === winner){
-        statusmessage.innerHTML = 'WINNER!!!!!'
-        statusmessage.style.color = 'green'
-        statusmessage.style.backgroundColor = 'black'
+        statusmessage.innerHTML = 'WINNER!!!!!';
+        statusmessage.style.color = 'green';
+        statusmessage.style.backgroundColor = 'black';
     }else{
-        statusmessage.innerHTML = 'You lose. :('
-        statusmessage.style.color = 'red'
-        statusmessage.style.backgroundColor = 'black'
+        statusmessage.innerHTML = 'You lose. :(';
+        statusmessage.style.color = 'red';
+        statusmessage.style.backgroundColor = 'black';
     }
 };
 
-function assignValue(){
-    if (currentSelection){
-        parseInt('.number1').text();
-    }
-}
