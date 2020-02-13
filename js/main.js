@@ -62,7 +62,7 @@ function boardSelection(number){
     if (parseInt(currentBalance.value) <= 0) return;
     if (parseInt(currentBet.value) > parseInt(currentBalance.value)) return;
     if (currentSelection) return;
-    currentSelection = number.target;
+    currentSelection = parseInt(number.target);
     number.target.style.border = '5px solid gold';
     statusmessage.style.color = 'gold';
     statusmessage.style.backgroundColor = 'black'
@@ -89,3 +89,8 @@ function checkForWin(pickedNumber, winner){
     }
 };
 
+function assignValue(){
+    if (currentSelection){
+        parseInt('.number1').text();
+    }
+}
