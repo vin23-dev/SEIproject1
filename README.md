@@ -26,6 +26,15 @@ Spin the wheel!
 
 ![https://i.imgur.com/IuLKz1J.jpg](https://i.imgur.com/IuLKz1J.jpg)
 
+## Pseudocode
+
+- write html and css to place wheel, balance, current bet and buttons to control on screen
+- if user clicks spin button randomize number output between 1-36
+- if user clicks place bet button store value and subtract from current balance
+- if user clicks reset button initialize manipulated elements back to original state
+- when board is clicked visually show selection and store value to compare to spin output
+- display messages based on different actions (bets, balance, win, loss, etc)
+
 ## Technologies Used
 
 - HTML

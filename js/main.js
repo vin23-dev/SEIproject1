@@ -58,7 +58,7 @@ function adjustBalance(){
         }
         render();
     }
-}
+};
 
 function render(){
     balancemessage.textContent = currentBalance;
@@ -103,9 +103,3 @@ function checkForWin(pickedNumber, winner){
         statusmessage.style.backgroundColor = 'black';
     }
 };
-
-function checkColor(){
-    if (currentWinner){
-        
-    }
-}
