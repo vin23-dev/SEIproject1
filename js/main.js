@@ -44,7 +44,7 @@ function adjustBalance(){
         }else if (parseInt(enterbet.value) > parseInt(currentBalance)){
             statusmessage.style.color = 'gold';
             statusmessage.style.backgroundColor = 'black'
-            statusmessage.innerHTML = `You don't have enough money to make that wager!`
+            statusmessage.innerHTML = `You don't have enough money to make that wager again!`
         }else{
             statusmessage.style.color = 'gold';
             statusmessage.style.backgroundColor = 'black'
