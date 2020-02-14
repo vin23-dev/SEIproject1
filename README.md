@@ -1,4 +1,3 @@
-# SEIproject1
 # Casino Roulette
 
 ## Description
@@ -7,25 +6,25 @@ Roulette is a popular game played in casinos around the world and originated in 
 
 ## Wireframe
 
-![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/84bf140c-675e-4312-b645-1df31ff74e6c/Roulette_Wireframe.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/84bf140c-675e-4312-b645-1df31ff74e6c/Roulette_Wireframe.png)
+![https://i.imgur.com/jndg4ig.png](https://i.imgur.com/jndg4ig.png)
 
 ## How to Play:
 
 [https://vin23-dev.github.io/SEIproject1/](https://vin23-dev.github.io/SEIproject1/)
 
-![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/076ae406-09b3-4924-a5ce-a035ce9a09c0/Screen_Shot_2020-02-13_at_6.37.12_PM.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/076ae406-09b3-4924-a5ce-a035ce9a09c0/Screen_Shot_2020-02-13_at_6.37.12_PM.png)
+![https://i.imgur.com/YAq5mTb.jpg](https://i.imgur.com/YAq5mTb.jpg)
 
 Type in how much you would like to bet.
 
-![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/1b5857c2-f9b1-4d81-80ee-bd907e05bd47/Screen_Shot_2020-02-13_at_6.37.33_PM.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/1b5857c2-f9b1-4d81-80ee-bd907e05bd47/Screen_Shot_2020-02-13_at_6.37.33_PM.png)
+![https://i.imgur.com/vryfDVw.jpg](https://i.imgur.com/vryfDVw.jpg)
 
 Choose what number/color you would like to bet on.
 
-![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/5c44498c-264e-46a2-aa62-d9f0360af13d/Screen_Shot_2020-02-13_at_6.38.08_PM.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/5c44498c-264e-46a2-aa62-d9f0360af13d/Screen_Shot_2020-02-13_at_6.38.08_PM.png)
+![https://i.imgur.com/Fvm99ns.png](https://i.imgur.com/Fvm99ns.png)
 
 Spin the wheel!
 
-![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/6d48af76-2577-4b1f-a155-d7998dac05ce/Screen_Shot_2020-02-13_at_6.38.29_PM.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/6d48af76-2577-4b1f-a155-d7998dac05ce/Screen_Shot_2020-02-13_at_6.38.29_PM.png)
+![https://i.imgur.com/IuLKz1J.jpg](https://i.imgur.com/IuLKz1J.jpg)
 
 ## Technologies Used
 
@@ -41,3 +40,5 @@ Spin the wheel!
 - [ ]  Add outside bets (dozens)
 - [ ]  Add high or low bets
 - [ ]  Add spinning wheel (would require canvas)
+
+[https://i.imgur.com/YAq5mTb.jpg](https://i.imgur.com/YAq5mTb.jpg)
