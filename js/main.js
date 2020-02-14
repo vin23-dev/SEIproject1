@@ -40,6 +40,7 @@ function init(){
     render();
 };
 
+//adjusts balance based on bet and displays messages based on values
 function adjustBalance(){
     if (currentBalance > 0 && currentBalance >= parseInt(enterbet.value)){
         currentBalance -= parseInt(enterbet.value);
@@ -64,6 +65,7 @@ function render(){
     balancemessage.textContent = currentBalance;
 };
 
+//resets board and other manipulated elements
 function reset(){
     init();
     if (currentSelection){
@@ -72,6 +74,7 @@ function reset(){
     }
 };
 
+//holds board selection, converts to integer
 function boardSelection(number){
     if (parseInt(currentBalance.value) <= 0) return;
     if (parseInt(currentBet.value) > parseInt(currentBalance.value)) return;
@@ -84,6 +87,7 @@ function boardSelection(number){
     statusmessage.innerHTML = `Spin the wheel!`;   
 };
 
+//randomizes wheel number between 1-36
 function getNumber(){
     if (parseInt(currentBalance.value) <= 0) return;
     if (parseInt(enterbet.value) > parseInt(currentBalance.value)) return;
@@ -92,6 +96,7 @@ function getNumber(){
     checkForWin(currentWinner, wheelValue);
 };
 
+//checks if wheel number is equal to board selection
 function checkForWin(pickedNumber, winner){
     if (pickedNumber === winner){
         statusmessage.innerHTML = 'WINNER!!!!!';
