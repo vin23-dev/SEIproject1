@@ -99,6 +99,7 @@ function getNumber(){
 //checks if wheel number is equal to board selection
 function checkForWin(pickedNumber, winner){
     if (pickedNumber === winner){
+        currentBalance += (parseInt(enterbet.value) * 36);
         statusmessage.innerHTML = 'WINNER!!!!!';
         statusmessage.style.color = 'green';
         statusmessage.style.backgroundColor = 'black';
@@ -107,4 +108,5 @@ function checkForWin(pickedNumber, winner){
         statusmessage.style.color = 'red';
         statusmessage.style.backgroundColor = 'black';
     }
+    render();
 };
