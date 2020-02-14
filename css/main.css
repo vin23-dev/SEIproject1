@@ -8,11 +8,10 @@ body{
     display: inline-block;
 }
 #balance{
-   margin-right: 100px;
-   padding-right: 30px;
    font-family: 'Dancing Script', cursive;
    color: black;
    font-size: xx-large;
+   width: 300px;
 
 }
 #enterbet{
@@ -21,7 +20,7 @@ body{
     width: 150px;
 }
 #currentbet{
-    margin-left: 50px;
+    margin-right: 140px;
     width: 150px;
     height: 100px;
     font-family: 'Dancing Script', cursive;
@@ -35,22 +34,24 @@ body{
     color: gold;
 }
 #subsection1{
-    display: inline-flex;
+    display: flex;
+    flex-direction: row;
     align-items: center;
-    margin-left: 175px;
+    justify-content: space-between;
 }
 #wheel{
     width: 300px;
     height: 300px;
     line-height: 300px;
     border: 5px solid black;
-    margin: auto 0;
+    margin: auto;
     border-radius: 50%;
     background-color: rgba(0,0,0,0.5);
     color: gold;
     text-align: center;
     font-size: 700%;
     align-content: center;
+    align-self: center;
     
 }
 #spinwheel{

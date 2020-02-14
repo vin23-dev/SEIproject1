@@ -1,23 +1,32 @@
 /*----- constants -----*/
+
 const redArr = [1, 3, 5, 7, 9, 12, 14, 16,
     18, 19, 21, 23, 25, 27, 30, 32, 34, 36];
 const blackArr = [2, 4, 6, 8, 10, 11, 13, 15,
      17, 20, 22, 24, 26, 28, 29, 31, 33, 35];
+
 /*----- app's state (variables) -----*/
+
 let currentBalance;
 let currentBet;
 let currentSelection;
 let currentWinner;
+
 /*----- cached element references -----*/
+
 let resetGame = document.getElementById('resetwheel');
 let spinWheel = document.getElementById('spinwheel');
 let wheelResult = document.getElementById('wheel');
+
 /*----- event listeners -----*/
+
 document.getElementById('placebet').addEventListener('click', adjustBalance);
 document.querySelector('.gameboard').addEventListener('click', boardSelection);
 resetGame.addEventListener('click', reset);
 spinWheel.addEventListener('click', getNumber);
+
 /*----- functions -----*/
+
 init();
 
 function init(){
@@ -32,7 +41,7 @@ function init(){
 };
 
 function adjustBalance(){
-    if (currentBalance > 0 && currentBalance >= parseInt(enterbet.value)) {
+    if (currentBalance > 0 && currentBalance >= parseInt(enterbet.value)){
         currentBalance -= parseInt(enterbet.value);
         if (currentBalance === 0){
             statusmessage.style.color = 'gold';
@@ -95,3 +104,8 @@ function checkForWin(pickedNumber, winner){
     }
 };
 
+function checkColor(){
+    if (currentWinner){
+        
+    }
+}
